@@ -1,7 +1,7 @@
 FROM php:apache
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y imagemagick libmagickwand-dev libfreetype6 libfreetype6-dev libjpeg62-turbo libjpeg62-turbo-dev && \
+    apt-get install --no-install-recommends -y imagemagick libmagickwand-dev libfreetype6 libfreetype6-dev libjpeg62-turbo libjpeg62-turbo-dev libzip-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \

@@ -26,8 +26,8 @@ ENV UPLOAD_DIR=/var/www/html/uploads
 
 VOLUME ["${DATA_DIR}", "${UPLOAD_DIR}"]
 
-RUN VERSION=3.1.6 && \
-    curl -L -o /tmp/lychee.tar.gz "https://github.com/electerious/Lychee/archive/v$VERSION.tar.gz" && \
+RUN VERSION=3.2.7 && \
+    curl -L -o /tmp/lychee.tar.gz "https://github.com/LycheeOrg/Lychee/archive/v$VERSION.tar.gz" && \
     tar -xvzf /tmp/lychee.tar.gz --strip-components 1 -C /var/www/html && \
     rm -rf $DATA_DIR/* && \
     rm -rf $UPLOAD_DIR/* && \
